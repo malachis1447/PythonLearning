@@ -22,5 +22,5 @@ This repository is filled with beginner programs I'm writing in python to teach 
 	 - [ ] [TO-DO] Celsius to Kelvin (and reverse)
 	 - [ ] [TO-DO] Fahrenheit to Kelvin (and reverse)
  - [x] 10-AdvancedCalculator (Testing)
-	 - [x] VS Code Debug Checks past
+	 - [x] VS Code Debug Checks passed
 	 - [ ] Test program thoroughly for bugs not caused by syntax errors (logic bugs)
