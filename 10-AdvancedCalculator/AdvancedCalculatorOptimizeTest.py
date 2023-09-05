@@ -11,8 +11,8 @@ def OperatorSelectionTest():
 
   try: 
     OperatorTest = int(input("Please enter the operation you'd like to perform"))
-    Num1Test = float(input("Please enter the base number for the equation: "))
-    Num2Test = float(input("Please enter the secondary number in the equation, or zero for none")) 
+    Num1 = float(input("Please enter the base number for the equation: "))
+    Num2 = float(input("Please enter the secondary number in the equation, or zero for none")) 
 
   except ValueError: 
     logging.error("This program only accepts numbers, please try again")
@@ -33,7 +33,7 @@ def OperatorSelectionTest():
       case 5:
         ExponentFuncTest(Num1, Num2)
       case 6:
-        SquareRootFunc(Num1)
+        SquareRootFuncTest(Num1)
       case _:
         logging.error("Your input was not recognized, please try again")
         OperatorSelectionTest()
@@ -41,33 +41,31 @@ def OperatorSelectionTest():
       logging.error("This program only accepts numbers, please try again")
       OperatorSelectionTest()
 
-def AdditionFunc():
+def AdditionFuncTest(Num1, Num2):
     print("The sum is: " + str(Num1 + Num2))
-    OperatorSelection()
+    OperatorSelectionTest()
 
-def SubtractionFunc():
+def SubtractionFuncTest(Num1, Num2):
     print("The answer is: " + str(Num1 - Num2))
-    OperatorSelection()
+    OperatorSelectionTest()
 
-def MultiplicationFunc():
+def MultiplicationFuncTest(Num1, Num2):
     print("The answer is: " + str(Num1 * Num2))
-    OperatorSelection()
+    OperatorSelectionTest()
 
-def DivisionFunc():
+def DivisionFuncTest(Num1, Num2):
     try:
         print("The answer is: " + (Num1 / Num2))
     except ZeroDivisionError:
         logging.error(" Division by zero isn't possible")
-        OperatorSelection()
+        OperatorSelectionTest(Num1, Num2)
 
-def ExponentFunc():
+def ExponentFuncTest(Num1, Num2):
     print("The exponent's value is: " + (Num1 ** Num2))
-    OperatorSelection()
+    OperatorSelectionTest()
 
-def SqrtFunc():
+def SqrtFuncTest(Num1):
     print("The square root of " + str(Num1) + " is: " + str(sqrt(Num1)))
-    OperatorSelection()
+    OperatorSelectionTest()
 
-OperatorSelection()
-
-  
+OperatorSelectionTest()
