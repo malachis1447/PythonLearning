@@ -33,7 +33,7 @@ def OperatorSelectionTest():
       case 5:
         ExponentFuncTest(Num1, Num2)
       case 6:
-        SquareRootFuncTest(Num1)
+        SqrtFuncTest(Num1)
       case _:
         logging.error("Your input was not recognized, please try again")
         OperatorSelectionTest()
@@ -55,13 +55,13 @@ def MultiplicationFuncTest(Num1, Num2):
 
 def DivisionFuncTest(Num1, Num2):
     try:
-        print("The answer is: " + (Num1 / Num2))
+        print("The answer is: " + str(Num1 / Num2))
     except ZeroDivisionError:
         logging.error(" Division by zero isn't possible")
         OperatorSelectionTest(Num1, Num2)
 
 def ExponentFuncTest(Num1, Num2):
-    print("The exponent's value is: " + (Num1 ** Num2))
+    print("The exponent's value is: " + str(Num1 ** Num2))
     OperatorSelectionTest()
 
 def SqrtFuncTest(Num1):
